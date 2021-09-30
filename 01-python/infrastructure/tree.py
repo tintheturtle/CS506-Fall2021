@@ -1,16 +1,24 @@
-def draw_tree():
-    
+def draw_tree(height):
 
-    print("""       _-_
+  leaves = """       _-_
     /~~   ~~\\
  /~~         ~~\\
 {               }
  \  _-     -_  /
-   ~  \\ //  ~
-_- -   | | _- _
-  _ -  | |   -_
-      // \\""")
-      
-    return
+   ~  \\\\ //  ~
+"""
 
-draw_tree()
+  trunk = """      // \\\\"""
+
+  wood = ""
+  for i in range(height):
+    wood += "  _ -  | |   -_\n"
+    
+  leaves += wood
+
+  leaves += trunk
+
+  print(leaves) 
+  return
+
+draw_tree(10)
